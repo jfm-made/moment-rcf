@@ -16,7 +16,9 @@ m.round(5, "Hours"  ).format('DD.MM.YYYY HH:mm:ss.SSS') ); // 25.02.2017 05:00:0
 ```
 
 ## Installation
-TBD
+``` console
+npm install moment-rcf
+```
 
 ## Testing
 ``` console
