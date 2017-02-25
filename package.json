@@ -2,7 +2,12 @@
   "name": "moment-rcf",
   "version": "1.0.0",
   "description": "Rounding methods for momentjs",
-  "main": "./src/moment-rcf",
+  "bugs": "https://github.com/jfm-made/moment-rcf/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jfm-made/moment-rcf.git"
+  },
+    "main": "./src/moment-rcf",
   "scripts": {
     "test": "mocha"
   },
