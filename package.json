@@ -1,0 +1,25 @@
+{
+  "name": "moment-rcf",
+  "version": "1.0.0",
+  "description": "Rounding methods for momentjs",
+  "main": "./src/moment-rcf",
+  "scripts": {
+    "test": "mocha"
+  },
+  "peerDependencies": {
+    "moment": ">= 2"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "should": "^11.2.0"
+  },
+  "keywords": [
+    "moment",
+    "momentjs",
+    "round",
+    "ceil",
+    "floor"
+  ],
+  "author": "Julius F. Martin <github@jfm-ma.de>",
+  "license": "MIT"
+}
