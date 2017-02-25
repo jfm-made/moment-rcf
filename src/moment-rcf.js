@@ -64,9 +64,9 @@
    * @param methodString - which method to use out of ["round","ceil","floor"]
    */
   function jfm_moment_rcf(moment, quantityInteger, unitString, methodString) {
-    const unitStrings = ['hour','minute','second','millisecond'];
-    const methods = ['round','ceil','floor'];
-    const boundaries = {
+    var unitStrings = ['hour','minute','second','millisecond'];
+    var methods = ['round','ceil','floor'];
+    var boundaries = {
         'hour': {
             upper: 24,
             lower: 1,
@@ -89,15 +89,15 @@
         }
     };
 
-    let quantity = parseInt(quantityInteger);
-    let unit = unitStrings[0];
-    let method = methods[0];
+    var quantity = parseInt(quantityInteger);
+    var unit = unitStrings[0];
+    var method = methods[0];
 
     quantity = (isNaN(quantity) ? 0 : quantity);
     unitString = (unitString ? unitString.toString() : unitStrings[0]);
     unitString = (unitString[unitString.length-1] == 's' ? unitString.slice(0,-1) : unitString).toLowerCase();
 
-    for(let i=0;i<unitStrings.length;i++) {
+    for(var i=0;i<unitStrings.length;i++) {
       if(unitStrings[i] === unitString) {
         unit = unitStrings[i];
         break;
@@ -114,19 +114,19 @@
       quantity %= boundaries[unit].upper;
     }
 
-    for(let i=0;i<methods.length;i++) {
+    for(var i=0;i<methods.length;i++) {
       if(methods[i] === methodString) {
         method = methods[i];
       }
     }
 
-    let ms = 0;
-    for(let i=unitStrings.indexOf(unit);i<unitStrings.length;i++) {
+    var ms = 0;
+    for(var i=unitStrings.indexOf(unit);i<unitStrings.length;i++) {
       ms += moment.get(unitStrings[i]) * boundaries[unitStrings[i]].ms;
     }
-    let unitFloat = ms/boundaries[unit].ms;
+    var unitFloat = ms/boundaries[unit].ms;
 
-    for(let i=unitStrings.indexOf(unit)+1;i<unitStrings.length;i++) {
+    for(var i=unitStrings.indexOf(unit)+1;i<unitStrings.length;i++) {
       moment.set(unitStrings[i],0);
     }
 
