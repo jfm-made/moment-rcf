@@ -24,6 +24,6 @@ npm install moment-rcf
 ``` console
 npm test
 ```
-# Licence
+# License
 
-[MIT](LICENCE)
+[MIT](LICENSE)
